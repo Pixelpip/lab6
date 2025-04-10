@@ -1,42 +1,145 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F6F0F0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+.form-container {
+  width: 350px;
+  background: #9FB3DF;
   padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-container h2 {
+  margin-bottom: 1.2rem;
+  color: #444;
+  font-size: 1.4rem;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0;
+  text-align: left;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #555;
 }
 
-.card {
-  padding: 2em;
+.form-input,
+button {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+.form-input.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 4px rgba(220, 53, 69, 0.4);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.form-group-password-toggle label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+button.form-submit {
+  margin-top: 1rem;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.form-submit:hover {
+  background: #8ab9ea;
+}
+
+button.form-submit:disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.success-box {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background: #f8f9fa;
+  border: 1px solid #A6D6D6;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.submitted-details {
+  margin-top: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #333;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submitted-details h3 {
+  margin-top: 0;
+  color: #e2acac;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.4rem;
+}
+
+.submitted-details p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
 }
